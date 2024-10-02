@@ -7,16 +7,16 @@ Setting up Social Authentication
     single: social authentication
     single: authentication
 
-Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website. 
+Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website.
 
-Account authentication can be configured in the AWX User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_awx` section. 
+Account authentication can be configured in the AWX User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_awx` section.
 
 .. _ag_org_team_maps:
 
 Organization and Team Mapping
 ---------------------------------
 
-.. index:: 
+.. index::
    single: organization mapping
    pair: authentication; organization mapping
    pair: authentication; team mapping
@@ -25,11 +25,11 @@ Organization and Team Mapping
 Organization mapping
 ~~~~~~~~~~~~~~~~~~~~~
 
-You will need to control which users are placed into which organizations based on their username and email address (mapping out your organization admins/users from social or enterprise-level authentication accounts).  
+You will need to control which users are placed into which organizations based on their username and email address (mapping out your organization admins/users from social or enterprise-level authentication accounts).
 
-Dictionary keys are organization names. Organizations will be created, if not already present and if the license allows for multiple organizations. Otherwise, the single default organization is used regardless of the key.  
+Dictionary keys are organization names. Organizations will be created, if not already present and if the license allows for multiple organizations. Otherwise, the single default organization is used regardless of the key.
 
-Values are dictionaries defining the options for each organization's membership.  For each organization, it is possible to specify which users are automatically users of the organization and also which users can administer the organization. 
+Values are dictionaries defining the options for each organization's membership.  For each organization, it is possible to specify which users are automatically users of the organization and also which users can administer the organization.
 
 **admins**: None, True/False, string or list/tuple of strings.
 
@@ -65,7 +65,6 @@ Values are dictionaries defining the options for each organization's membership.
 
 Organization mappings may be specified separately for each account authentication backend.  If defined, these configurations will take precedence over the global configuration above.
 
-::
 
 Team mapping
 ~~~~~~~~~~~~~~
@@ -115,4 +114,3 @@ Uncomment the line below (i.e. set ``SOCIAL_AUTH_USER_FIELDS`` to an empty list)
 ::
 
     SOCIAL_AUTH_USER_FIELDS = []
-
