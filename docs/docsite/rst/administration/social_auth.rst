@@ -1,16 +1,3 @@
-.. _ag_social_auth:
-
-Setting up Social Authentication
-==================================
-
-.. index::
-    single: social authentication
-    single: authentication
-
-Authentication methods help simplify logins for end users--offering single sign-ons using existing login information to sign into a third party website rather than creating a new login account specifically for that website.
-
-Account authentication can be configured in the AWX User Interface and saved to the PostgreSQL database. For instructions, refer to the :ref:`ag_configure_awx` section.
-
 .. _ag_org_team_maps:
 
 Organization and Team Mapping
@@ -102,15 +89,3 @@ the team will always be assigned to the single default organization.
 
 
 Team mappings may be specified separately for each account authentication backend, based on which of these you setup.  When defined, these configurations take precedence over the global configuration above.
-
-::
-
-    SOCIAL_AUTH_GITHUB_TEAM_MAP = {}
-    SOCIAL_AUTH_GITHUB_ORG_TEAM_MAP = {}
-    SOCIAL_AUTH_GITHUB_TEAM_TEAM_MAP = {}
-
-Uncomment the line below (i.e. set ``SOCIAL_AUTH_USER_FIELDS`` to an empty list) to prevent new user accounts from being created.  Only users who have previously logged in to AWX using social or enterprise-level authentication or have a user account with a matching email address will be able to login.
-
-::
-
-    SOCIAL_AUTH_USER_FIELDS = []
