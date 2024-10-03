@@ -34,9 +34,7 @@ register(
     'DISABLE_LOCAL_AUTH',
     field_class=fields.BooleanField,
     label=_('Disable the built-in authentication system'),
-    help_text=_(
-        "Controls whether users are prevented from using the built-in authentication system. "
-    ),
+    help_text=_("Controls whether users are prevented from using the built-in authentication system. "),
     category=_('Authentication'),
     category_slug='authentication',
 )
