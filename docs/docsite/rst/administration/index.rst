@@ -40,7 +40,6 @@ Need help or want to discuss AWX including the documentation? See the :ref:`Comm
   isolation_variables
   oauth2_token_auth
   authentication_timeout
-  kerberos_auth
   session_limits
   custom_rebranding
   troubleshooting
