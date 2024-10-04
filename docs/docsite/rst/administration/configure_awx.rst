@@ -10,9 +10,6 @@ AWX Configuration
 
 You can configure various AWX settings within the Settings screen in the following tabs:
 
-.. image:: ../common/images/ug-settings-menu-screen.png
-   :alt: Screenshot of the AWX settings menu screen.
-
 Each tab contains fields with a **Reset** button, allowing you to revert any value entered back to the default value. **Reset All** allows you to revert all the values to their factory default values.
 
 **Save** applies changes you make, but it does not exit the edit dialog. To return to the Settings screen, click **Settings** from the left navigation bar or use the breadcrumbs at the top of the current view.

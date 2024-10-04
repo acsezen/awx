@@ -27,8 +27,6 @@ Known Issues
    pair: known issues; Ansible Azure dependencies
    pair: known issues; authentication (reactive user)
    pair: known issues; user cannot log in using authentication
-   pair: known issues; login problems with social authentication
-   pair: known issues; OAuth account recreation
    pair: known issues; login via http
    pair: known issues; web sockets in safari
    pair: known issues; browser auto-complete

@@ -676,29 +676,6 @@ class ScheduleUnifiedJobsList(SubListAPIView):
     name = _('Schedule Jobs List')
 
 
-class AuthView(APIView):
-    '''List enabled single-sign-on endpoints'''
-
-    authentication_classes = []
-    permission_classes = (AllowAny,)
-    swagger_topic = 'System Configuration'
-
-    def get(self, request):
-        data = OrderedDict()
-        if 'ansible_base.authentication' in getattr(settings, "INSTALLED_APPS", []):
-            # app is using ansible_base authentication
-            # add ansible_base authenticators
-            authenticators = AnsibleBaseAuthenticator.objects.filter(enabled=True, category="sso")
-            for authenticator in authenticators:
-                login_url = authenticator.get_login_url()
-                data[authenticator.name] = {
-                    'login_url': login_url,
-                    'name': authenticator.name,
-                }
-
-        return Response(data)
-
-
 def immutablesharedfields(cls):
     '''
     Class decorator to prevent modifying shared resources when ALLOW_LOCAL_RESOURCE_MANAGEMENT setting is set to False.
