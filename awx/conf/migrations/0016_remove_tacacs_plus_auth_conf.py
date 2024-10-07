@@ -16,7 +16,6 @@ def remove_tacacs_plus_auth_conf(apps, scheme_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('conf', '0015_remove_social_oauth_conf'),
     ]

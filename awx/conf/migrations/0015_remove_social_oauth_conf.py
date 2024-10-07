@@ -72,7 +72,6 @@ def remove_social_oauth_conf(apps, scheme_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('conf', '0014_remove_saml_auth_conf'),
     ]

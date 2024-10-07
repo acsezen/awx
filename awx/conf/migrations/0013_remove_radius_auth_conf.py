@@ -13,7 +13,6 @@ def remove_radius_auth_conf(apps, scheme_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('conf', '0012_remove_oidc_auth_conf'),
     ]
