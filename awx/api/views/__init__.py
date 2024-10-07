@@ -36,7 +36,7 @@ from django.utils.translation import gettext_lazy as _
 # Django REST Framework
 from rest_framework.exceptions import APIException, PermissionDenied, ParseError, NotFound
 from rest_framework.parsers import FormParser
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.renderers import JSONRenderer, StaticHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.settings import api_settings
@@ -125,9 +125,6 @@ from awx.api.views.mixin import (
 )
 from awx.api.pagination import UnifiedJobEventPagination
 from awx.main.utils import set_environ
-
-if 'ansible_base.authentication' in getattr(settings, "INSTALLED_APPS", []):
-    from ansible_base.authentication.models.authenticator import Authenticator as AnsibleBaseAuthenticator
 
 logger = logging.getLogger('awx.api.views')
 
